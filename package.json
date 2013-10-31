@@ -1,0 +1,27 @@
+{
+  "name": "md-workflow",
+  "version": "0.0.0",
+  "description": "Wokflow tool for building and previewing a markdown doc",
+  "bin": {
+    "md-workflow": "md-workflow"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/quackingduck/md-workflow"
+  },
+  "author": "Myles Byrne <myles@myles.id.au>",
+  "license": "BSD",
+  "bugs": {
+    "url": "https://github.com/quackingduck/md-workflow/issues"
+  },
+  "keywords": [
+    "github",
+    "markdown"
+  ],
+  "devDependencies": {
+    "wach": "~0.10.0",
+    "rld": "~0.3.0",
+    "ghstyles": "~0.1.0",
+    "marked": "~0.2.9"
+  }
+}

@@ -1,0 +1,14 @@
+#!/bin/bash
+
+# Get first arg and remove .md extension
+filename=${1/.md/}
+
+# Build the HTML file
+marked < $filename.md | ghstyles > $filename.html
+
+# Show it in the browser
+open $filename.html
+
+# Reload the browser when it's modified
+wach -o $filename.md \
+  "(marked < $filename.md | ghstyles > $filename.html) && rld chrome"
