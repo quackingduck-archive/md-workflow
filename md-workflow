@@ -3,12 +3,14 @@
 # Get first arg and remove .md extension
 filename=${1/.md/}
 
+tmp_build_path=/tmp/$filename.html
+
 # Build the HTML file
-marked < $filename.md | ghstyles > $filename.html
+marked < $filename.md | ghstyles > $tmp_build_path
 
 # Show it in the browser
-open $filename.html
+open $tmp_build_path
 
 # Reload the browser when it's modified
 wach -o $filename.md \
-  "(marked < $filename.md | ghstyles > $filename.html) && rld chrome"
+  "(marked < $filename.md | ghstyles > $tmp_build_path) && rld chrome"
